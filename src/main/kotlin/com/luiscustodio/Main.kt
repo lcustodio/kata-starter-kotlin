@@ -1,5 +1,6 @@
-package com.luiscustodio.com.luiscustodio
+package com.luiscustodio
 
 fun main() {
-    println("Hello World!")
+
+    println("Hello world 1")
 }
