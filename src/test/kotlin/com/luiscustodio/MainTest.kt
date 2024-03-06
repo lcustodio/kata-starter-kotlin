@@ -30,7 +30,7 @@ class P19Test {
 
 
     private fun rotate(index: Int, toList: List<Char>): List<Char> {
-        val slice = toList.slice(IntRange(0, index - 1))
-        return toList.slice(IntRange(index, toList.size - 1)) + slice
+        val slice = toList.take(index)
+        return toList.drop(index) + slice
     }
 }
