@@ -28,9 +28,19 @@ class P19Test {
         assertThat(rotate(3, testInput), equalTo(expected))
     }
 
+    @Test
+    fun `rotate a list N places to the left with negative numbers`() {
+        val testInput = "abcdefghijk".toList()
+        val expected = "jkabcdefghi".toList()
+        assertThat(rotate(-2, testInput).size, equalTo(testInput.size))
+        assertThat(rotate(-2, testInput), equalTo(expected))
+    }
 
     private fun rotate(index: Int, toList: List<Char>): List<Char> {
-        val slice = toList.take(index)
-        return toList.drop(index) + slice
+        if (index < 0) {
+            val offset = toList.size + index
+            return toList.drop(offset) + toList.take(offset)
+        }
+        return toList.drop(index) + toList.take(index)
     }
 }
