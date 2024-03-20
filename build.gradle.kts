@@ -7,8 +7,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation("com.natpryce:hamkrest:1.8.0.1")
-    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("io.strikt:strikt-core:0.34.0")
 }
 
 kotlin {

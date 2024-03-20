@@ -1,6 +1,5 @@
 package com.luiscustodio
 
-fun main() {
-
-    println("Hello world 1")
+fun placeholderFunction(): Int {
+    return 1
 }
